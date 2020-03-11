@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alexandria's Hangman Game</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bellota|Indie+Flower|Neucha|Satisfy&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onload="functionToBeExecuted">
+
+    <h1>Alexandria's Hangman Game</h1>
+    <br>
+    <h2>Hello and welcome to my Hangman Guessing Game!</h2>
+
+    <u><h3>The objective: </u>
+    <p>Try to guess the letters of the "secret" word! If and once you guess all of the letters correctly, you WIN the game! Go ahead and give it a shot!</p>
+    </h3>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3><p>Try your luck! Enter a letter below!</p></h3>
+    <p id="formfield"></p>
+<form name="inputfield">
+<input name="formfield" type="text" size="10" maxlength="1">
+<input name="button" type="button" value="Guess" onClick="()">
+
+<p id="wrongLetters">Incorrect Letters:</p>
+<input name="refresh" type="button" value="New Game" onClick="location.reload()">
+</form>
+
+    <script>
+      window.onload = function () { 
+
+        function guessLetter (letter) {
+
+        }
+        // Word Chosen to Win the Game
+        var words = [
+            "apple"
+        ];
+
+        // Random word and answer array
+        var word = words[Math.floor(Math.random() * words.length)];
+
+        var answerArray = [];
+        for (var i = 0; i < word.length; {
+            answerArray[i++] = "_";
+        }
+            var lettersRemaining = word.length;
+        // The game loop
+        while (lettersRemaining > 0) {
+
+            // Here is the progress of the game 
+            alert(answerArray.join(" "));
+
+            // Here the player will take a guess
+            var guess = prompt("Go ahead and take a guess. Enter ONE letter");
+            if (guess === null) {
+                // Exit the game loop
+                break;
+            } else if (guess.length !== 1) {
+                alert("Try your luck! Enter a letter!");
+            } else {
+                // Update the game state with the guess
+                for (var a = 0; a < word.length; {
+                    if(word[a] === guess) {
+                    answerArray[a] = guess;
+                    lettersRemaining--;
+                }
+            }
+        }
+
+            }
+        // The answer and end of the game
+        alert(answerArray.join(" "));
+        alert("GAME OVER! YOU WON! The secret word was " + word);
+
+        function myFunction() {
+            var x = document.getElementById("myText").value;
+            document.getElementById("demo").innerHTML = x;
+        }
+        document.addEventListener("DOMContentLoaded", function (event) {
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+body {
+  background-image: url(./Images/questionmarkbackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  font-family: 'Neucha', cursive;
+  width: 500px;
+  height: 700px;
+  border: 10px solid rgb(0, 102, 128);
+  padding: 50px;
+  margin: 20px;
+}
+
+input {
+  border: 2px solid rgb(0, 102, 128);
+  font-family: 'Neucha', cursive;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  padding:18px 10px;
+  width:180px;
+  cursor: pointer;
+  
+}
